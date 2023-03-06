@@ -1,8 +1,39 @@
-body {
-    background-color: black;
-    color: whitesmoke;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Frijole&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+:root {
+    --primary-background-color: #1E5E93;
+    --primary-font-color: #F3EEF1;
+    --primary-timer-background: #333;
+    --font-header: 'Frijole', cursive;
+    --font-button: 'Averia Libre', cursive;
+    --font-primary: 'Montserrat', sans-serif;
+    background-color: var(--primary-background-color);
+    color: var(--primary-font-color);
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: var(--font-primary);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.container>* {
+    width: 100%;
+    text-align: center;
 }
 
 .timer {
@@ -11,9 +42,8 @@ body {
     justify-content: center;
     align-items: center;
     align-content: center;
-    font-size: 2rem;
+    font-size: 4rem;
     font-weight: bold;
-    border: 1px solid red;
 }
 
 .time-block {
@@ -24,14 +54,13 @@ body {
 }
 
 .time {
-    padding: 1rem;
-    background-color: #333;
-    color: #eee;
+    padding: 1.5rem;
+    background-color: var(--primary-timer-background);
     border-radius: 0.5rem;
 }
 
 .label {
     margin-top: 0.5rem;
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.7rem;
 }
