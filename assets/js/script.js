@@ -1,5 +1,5 @@
 // set the countdown date and time (YYYY-MM-DD HH:MM:SS format)
-const countdownDate = new Date('2023-03-07T07:59:59').getTime();
+const countdownDate = new Date('2023-03-08T07:59:59').getTime();
 
 // get the timer elements from the HTML
 const daysEl = document.querySelector('.days .time');
