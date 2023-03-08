@@ -24,6 +24,8 @@
     width: 100vw;
     height: 100vh;
     display: flex;
+    flex-direction: column;
+    border: 2px solid green;
     justify-content: center;
     align-items: center;
     max-width: 75rem;
@@ -44,6 +46,7 @@
     align-content: center;
     font-size: 4rem;
     font-weight: bold;
+    margin: 0 0 10rem 0;
 }
 
 .time-block {
@@ -65,34 +68,88 @@
     font-size: 1.7rem;
 }
 
+.countdown-date {
+    display: inherit;
+    flex-direction: column;
+    width: 30%;
+}
+
+#countdown {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+input[type="datetime-local"] {
+    height: 40px;
+    border-radius: 5px 5px 0 0;
+    border: none;
+    padding: 0.5rem;
+    background-color: var(--primary-font-color);
+}
+
+.countdown-date button {
+    height: 30px;
+    transition-duration: 0.1s;
+    background-color: var(--primary-timer-background);
+    color: var(--primary-font-color);
+    border-radius: 0 0 5px 5px;
+    border: none;
+}
+
+.countdown-date button:hover {
+    background-color: var(--primary-font-color);
+    color: var(--primary-timer-background);
+    opacity: 90%;
+}
+
 /* 
   ##Device = Low Resolution Tablets, Mobiles (Landscape)
   ##Screen = B/w 481px to 767px
 */
 
 @media (min-width: 481px) and (max-width: 767px) {
-  
-    /* CSS */
-    
-  }
-  
-  /* 
-    ##Device = Most of the Smartphones Mobiles (Portrait)
-    ##Screen = B/w 320px to 479px
-  */
-  
-  @media (min-width: 320px) and (max-width: 480px) {
-    
+
     .timer {
-        font-size: 3rem;
+        font-size: 5rem;
+        margin: 0 0 5rem 0;
     }
-    
+
     .time {
         padding: 1rem;
     }
-    
+
+    .label {
+        font-size: 1.5rem;
+    }
+
+    .countdown-date {
+        width: 30%;
+    }
+
+}
+
+/* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+    .timer {
+        font-size: 3rem;
+        margin: 0 0 7rem 0;
+    }
+
+    .time {
+        padding: 1rem;
+    }
+
     .label {
         font-size: 1.2rem;
     }
-    
-  }
+
+    .countdown-date {
+        width: 50%;
+    }
+}
